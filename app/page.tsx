@@ -6,6 +6,7 @@ import { ArrowRight, Code, Bot, Award, GraduationCap } from "lucide-react";
 import { personalInfo, skills, academics } from "@/data/portfolio-data";
 import { useEffect, useRef, useState } from "react";
 import SkillChart from "@/components/SkillChart";
+import { TechIcon } from "@/components/TechIcon";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -114,7 +115,9 @@ export default function HomePage() {
                 transition={{ delay: index * 0.1 }}
                 className="glass rounded-2xl p-6 text-center hover-3d cursor-pointer"
               >
-                <div className="text-4xl mb-2">{skill.icon}</div>
+                <div className="flex items-center justify-center mb-2">
+                  <TechIcon name={skill.name} className="w-7 h-7 text-gradient" />
+                </div>
                 <div className="font-semibold">{skill.name}</div>
                 <div className="text-sm text-foreground/60 mt-1">{skill.category}</div>
               </motion.div>

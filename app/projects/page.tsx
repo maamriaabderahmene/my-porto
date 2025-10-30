@@ -6,6 +6,7 @@ import { projects } from "@/data/portfolio-data";
 import { ProjectModal } from "@/components/ProjectModal";
 import { ExternalLink, Github, Filter } from "lucide-react";
 import Image from "next/image";
+import { TechIcon } from "@/components/TechIcon";
 
 const categories = ["All", "Web", "Mobile", "Desktop", "Robotics", "3D/Design"];
 
@@ -99,7 +100,8 @@ export default function ProjectsPage() {
                 <p className="text-foreground/70 mb-4 line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.slice(0, 3).map((tech) => (
-                    <span key={tech} className="text-xs px-2 py-1 glass rounded-full">
+                    <span key={tech} className="text-xs px-2 py-1 glass rounded-full inline-flex items-center gap-1">
+                      <TechIcon name={tech} className="w-3.5 h-3.5" />
                       {tech}
                     </span>
                   ))}
