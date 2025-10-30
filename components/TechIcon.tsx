@@ -19,7 +19,6 @@ import {
   Binary,
   Bot,
   Cuboid,
-  CpuCog,
 } from "lucide-react";
 
 // Map common tech names to icons
@@ -65,8 +64,8 @@ const NAME_MAP: Record<string, any> = {
 
   // Electronics/Robotics
   arduino: Cpu,
-  "raspberry pi": CpuCog,
-  jetson: CpuCog,
+  "raspberry pi": Cpu,
+  jetson: Cpu,
   robotics: Bot,
 
   // Design / 3D
